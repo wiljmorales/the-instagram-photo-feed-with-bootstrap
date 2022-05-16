@@ -15,32 +15,101 @@
       crossorigin="anonymous"
     />
     <title>Instagram Feed Bootstrap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header
-      class="d-flex justify-content-between py-3 px-5 bg-secondary bg-opacity-10"
+      class="d-flex justify-content-between py-2 px-5 bg-secondary bg-opacity-10 text-secondary"
     >
-      <div class="d-flex align-items-center fw-bold">
-        <i class="fa-brands fa-instagram me-1"></i>
-        <p class="m-0">Instagram</p>
+      <div class="d-flex align-items-center fw-bold fs-2">
+        <i class="fa-brands fa-instagram me-1 "></i>
+        <p class="m-0 fst-italic">Instagram</p>
       </div>
       <div class="d-flex align-items-center">
-        <button class="bg-success">Create a new post</button>
-        <div class="d-flex ms-2">
-          <i class="fa-solid fa-gear"></i>
-          <i class="fa-solid fa-sort-down"></i>
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Create a new post
+        </button>
+        <div class="dropdown">
+          <button class="btn text-secondary dropdown-toggle d-flex align-items-center ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-gear me-1"></i>
+          </button>
+          <ul class="dropdown-menu text-secondary" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
         </div>
+        
       </div>
     </header>
 
-    <ul class="nav nav-pills d-flex justify-content-center py-2">
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+            <div class="d-flex mt-2">
+              <button type="button" class="btn btn-outline-secondary me-2">
+                <i class="fa-solid fa-camera"></i>
+              </button>
+              <button type="button" class="btn btn-outline-secondary">
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-success">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="nav nav-pills d-flex justify-content-center py-2s">
       <li class="nav-item">
         <a href="#gallery" class="nav-link active" data-bs-toggle="tab">
           <i class="fa-solid fa-border-all"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a href="#feed" class="nav-link " data-bs-toggle="tab">
+        <a href="#feed" class="nav-link" data-bs-toggle="tab">
           <i class="fa-solid fa-square"></i>
         </a>
       </li>
@@ -48,7 +117,7 @@
 
     <div class="tab-content">
       <div id="gallery" class="container tab-pane active">
-        <div class="row">
+        <div class="row g-1">
           <div class="col">
             <img
               src="https://i2.wp.com/revista.weepec.com/wp-content/uploads/2018/05/cachorro.jpg?fit=1000%2C846&ssl=1"
@@ -75,7 +144,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row g-1">
           <div class="col">
             <img
               src="https://img.blogs.es/anexom/wp-content/uploads/2018/03/programar-920x515.jpg"
@@ -102,7 +171,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row g-1">
           <div class="col">
             <img
               src="https://img.freepik.com/foto-gratis/mujer-loca-enojada_102671-4473.jpg?w=1380"
@@ -128,10 +197,11 @@
             />
           </div>
         </div>
-      </div> 
+      </div>
       <div id="feed" class="tab-pane">
-
-        <div  class=" bg-secondary bg-opacity-25 d-flex flex-column align-items-center">
+        <div
+          class="bg-secondary bg-opacity-25 d-flex flex-column align-items-center"
+        >
           <div class="card w-50 my-5">
             <div
               class="post-header d-flex justify-content-between align-items-center px-3"
@@ -148,8 +218,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
@@ -172,8 +242,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
@@ -196,8 +266,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
@@ -220,8 +290,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
@@ -244,8 +314,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
@@ -268,8 +338,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
@@ -292,8 +362,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
@@ -316,8 +386,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
@@ -340,8 +410,8 @@
             </figure>
             <p class="fw-bold ms-3">23 Likes</p>
             <p class="mx-3">
-              This is my first photo of the feed this is a multi line comment for
-              testing porpuses. I am learnind to code with #BreatheCode
+              This is my first photo of the feed this is a multi line comment
+              for testing porpuses. I am learnind to code with #BreatheCode
             </p>
             <div class="d-flex justify-content-between pb-1 px-3">
               <i class="fa-regular fa-heart"></i>
